@@ -16,6 +16,9 @@ document
     const ballanceTotalElement = document.getElementById("ballance-total");
     const previousBallanceString = ballanceTotalElement.innerText;
     const previousBallanceTotal = parseFloat(previousBallanceString);
+    if (newWithdrawAmount > previousBallanceTotal) {
+      alert("not enough money");
+    }
 
     const newBallanceTotal = previousBallanceTotal - newWithdrawAmount;
     ballanceTotalElement.innerText = newBallanceTotal;
